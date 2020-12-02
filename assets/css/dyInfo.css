@@ -1,0 +1,51 @@
+.container {
+  width: 1200px !important;
+  padding: 0;
+}
+.container > .news-content {
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  box-shadow: 1px 0px 3px 1px #ccc inset;
+  width: 100%;
+  padding-top: 20px;
+}
+.my-dy-info .container {
+  min-height: 0;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.my-dy-info > .el-main {
+  padding: 0;
+  overflow: hidden;
+}
+.my-dy-info-banner {
+  width: 1920px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.new-picture {
+  width: 189px;
+  height: 123px;
+  margin-left: 41px;
+}
+.new-article-content {
+  text-align: left;
+}
+.new-article-content > .news-content {
+  text-indent: 2em;
+  margin: 10px 0;
+}
+.news-content-footer {
+  overflow: hidden;
+}
+.news-content-footer-time {
+  float: left;
+}
+.news-content-footer-link {
+  float: right;
+}

@@ -1,0 +1,24 @@
+{
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "node": "current"
+            }
+          }
+        ],
+        [
+          "env",
+          {
+            "modules": false,
+            "useBuiltIns": "entry"
+          }
+        ],
+        "stage-3"
+      ]
+    }
+  }
+}
