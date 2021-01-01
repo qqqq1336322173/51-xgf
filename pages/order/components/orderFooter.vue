@@ -128,7 +128,7 @@ export default {
       const userid = localStorage.userid || 5;
       // 调用接口
       httpServer({
-        url: 'http://120.78.61.58:81/eduonline/user/order.action',
+        url: 'http://81.69.237.90:81/eduonline/user/order.action',
         methods: 'post'
       }, {
         userid,

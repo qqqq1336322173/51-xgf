@@ -68,7 +68,7 @@ export default {
     const { productid } = ctx.query
     // 获取购买商品信息
     const productInfo = await httpServer({
-      url: 'http://120.78.61.58:81/eduonline/user/findProduct.action',
+      url: 'http://81.69.237.90:81/eduonline/user/findProduct.action',
       method: 'post'
     }, {
       productid

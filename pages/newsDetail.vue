@@ -1,13 +1,15 @@
 <template>
   <div class="newsDetail">
     <img class="new-banner"
-         src="~assets/img/newsDetail/banner01.png"
+         src="~assets/img/newsDetail/about-banner.png"
          alt />
     <div class="block">
       <div class="m-content">
         <div class="new-left">
           <div class="title">
-            <p>行业动态 > 详情</p>
+            <p>
+              <nuxt-link :to="{name:'dyInfo'}">行业动态</nuxt-link> > 详情
+            </p>
           </div>
           <div class="content">
             <p class="p-1">{{newsinfo.newstitle}}</p>
@@ -18,7 +20,7 @@
         </div>
         <div class="new-right">
           <div class="right-title">
-            <p>推存动态</p>
+            <p>推荐动态</p>
           </div>
           <div class="right-content">
             <div class="right-item"
@@ -71,7 +73,7 @@ export default {
     getnewLis () {
       httpServer(
         {
-          url: "http://120.78.61.58:81/eduonline/news/newsForPage.action",
+          url: "http://81.69.237.90:81/eduonline/news/newsForPage.action",
           method: "get",
         },
         {
@@ -189,6 +191,9 @@ export default {
         text-overflow: ellipsis;
         white-space: nowrap;
         line-height: 3;
+      }
+      .r-title:hover {
+        color: #f00;
       }
       .intro {
         color: #666;

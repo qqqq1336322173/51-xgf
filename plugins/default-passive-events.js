@@ -10,7 +10,7 @@ Vue.prototype.unescape = function (html) {
   //   .replace(/>/g, ">")
   //   .replace(/"/g, "\"")
   //   .replace(/'/g, "\'")
-  return html.replace(/<[^>]+>/g, "").substring(0, 100) + '...';
+  return html.replace(/<[^>]+>/g, "").substring(0, 60) + '...';
   // html = html.substring(30, 60);
   // console.log(html)
   // return html;

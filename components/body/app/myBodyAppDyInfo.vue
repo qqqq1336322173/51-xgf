@@ -19,7 +19,7 @@
           </el-col>
           <el-col :span="8">
             <div class="">
-              <img src="~assets/img/app/dyInfo/detail_info.png"
+              <img :src="item.newsImg || require('@/assets/img/app/dyInfo/detail_info.png')"
                    alt="详情图" />
             </div>
           </el-col>

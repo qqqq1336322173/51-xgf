@@ -2,7 +2,8 @@
   <div class="appIndex">
     <my-header />
     <!-- 轮播图 -->
-    <div class="banner-block">
+    <div class="banner-block"
+         @click="swipeOutClicked">
       <!-- <mt-swipe :auto="4000">
         <mt-swipe-item class="swipe-sty"
                        v-for="item in banners"
@@ -10,10 +11,12 @@
                alt=""></mt-swipe-item>
       </mt-swipe> -->
       <mt-swipe :auto="4000">
-        <mt-swipe-item class="swipe-sty"><img src="~/assets/img/app/index/banner01.jpg"
+        <mt-swipe-item class="swipe-sty"
+                       data-id="0"><img src="~/assets/img/app/index/banner01.jpg"
                alt="" /></mt-swipe-item>
-        <mt-swipe-item class="swipe-sty"><img src="~/assets/img/app/index/banner02.jpg"
-               alt="" /></mt-swipe-item>
+        <mt-swipe-item class="swipe-sty"
+                       data-id="1"><img src="~/assets/img/app/index/banner02.jpg"
+               alt="腾讯课堂" /></mt-swipe-item>
       </mt-swipe>
     </div>
     <!-- 内容 -->
@@ -429,6 +432,12 @@ export default {
     goNewsInfo (id) {
       this.$router.push("/appNewsDetails?id=" + id);
     },
+    swipeOutClicked (item) {
+      if (item.target.parentNode.getAttribute('data-id') == 1) {
+        location.href = "https://ke.qq.com/course/3102964?tuin=93c627d7"
+      }
+      // console.log()
+    }
   },
 };
 </script>

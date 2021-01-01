@@ -7,12 +7,12 @@
         <div class="training-header">Oracle- -MySql认证培训</div>
         <div class="training-content">
           <img class="left-box"
-               src="@/assets/img/app/order/toux.png"
+               src="@/assets/img/app/order/mysql-tx.png"
                alt />
           <div class="right-box">
             <p>课程名称: Oracle-MySql认证培训</p>
             <p>开班类型: 线上开班</p>
-            <p>认证等级: OCA/OCP</p>
+            <p>认证等级: OCP</p>
             <p>授课方式: 线上直播+录播、班级群在线答疑</p>
 
             <p class="m-t-30">

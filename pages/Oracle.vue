@@ -24,28 +24,32 @@
               <el-col :span="24"
                       :offset="2">
                 <div class="txt_v grid-content">
-                  <h1>{{t0}}</h1>
+                  <h1 style="margin-left: 40px">{{t0}}</h1>
                 </div>
               </el-col>
               <el-row>
                 <el-col :span="8"
                         :offset="2">
-                  <div class="grid-content bg-purple-dark1"><img :src="back01"></div>
+                  <div class="grid-content bg-purple-dark1 bg-width">
+                    <p class="bg-p-1">Oracle数据库</p>
+                    <p class="bg-p-2">认证培训</p>
+                  </div>
                 </el-col>
                 <el-col :span="14">
                   <el-row>
                     <el-col :span="18"
                             :offset="2">
                       <div class="grid-content bg-purple-dark1"
-                           style="height: 436px;position:relative;">
+                           style="height: 350px;position:relative;">
                         <div class="txt_v grid-content"
-                             style="position:absolute;bottom:0px;text-align: left">
+                             style="position:absolute;top:0px;text-align: left" >
                           <ol>
                             <li v-for="(value,key) in texts"
                                 :key="key">
                               <el-row type="flex"
                                       class="row-bg"
                                       justify="center">
+
                                 <el-col :span="24">
                                   <h1>{{value}}</h1>
                                 </el-col>
@@ -83,7 +87,7 @@
         <el-row>
           <el-col :span="24">
             <div class="grid-content container bg-purple-dark1"
-                 style="height: 120px;padding: 25px"><img :src="kcgs"
+                 style="height: 120px;padding: 25px 25px 25px 170px"><img :src="kcgs"
                    alt=""></div>
           </el-col>
         </el-row>
@@ -125,7 +129,7 @@
         <el-row :gutter="4">
           <!--        <el-col :span="24"><div class="grid-content" align="center" style="padding-top: 8px"><h1>{{t1}}</h1></div></el-col>-->
           <el-col :span="24">
-            <div class="txt_c b-center-a grid-content">{{t1}}<el-col :span="24"
+            <div class="txt_c b-center-a grid-content" style="margin-left: 160px">{{t1}}<el-col :span="24"
                       :offset="2">
                 <!--            <div class="v-line"></div>-->
               </el-col>
@@ -142,7 +146,7 @@
               <div class="v-l"
                    style="height: 600;"></div>
               <li v-for="(va,key) in kcdg_list"
-                  :key="key">
+                  :key="key"  style="padding-top: 10px">
 
                 <el-row>
                   <el-col :span="24">
@@ -189,7 +193,7 @@
                             <el-col :span="18">
                               <div class="grid-content bg-purple-light1"
                                    style="letter-spacing: 1px ;">
-                                <h1 v-html="va.text"></h1>
+                                   <p class="p-1" v-html="va.text"></p>
                               </div>
                             </el-col>
                           </div>
@@ -283,10 +287,12 @@
                                        </div>
 
                                 <div style="margin:0px;padding:10px;">
-                                  <h1 class="color-fff">{{v.name}}</h1>
+                                  <!-- <h1 class="color-fff">{{v.name}}</h1> -->
+                                  <p class="color-fff p-3">{{v.name}}</p>
                                 </div>
                                 <div>
-                                  <h2 v-html="v.text" class="color-fff"></h2>
+                                  <!-- <h2 v-html="v.text" class="color-fff"></h2> -->
+                                  <p v-html="v.text" class="color-fff p-2"></p>
                                 </div>
 
                               </div>
@@ -311,7 +317,7 @@
                 <el-col :span="24">
                   <div class="grid-content mb-20 bg-purple1"
                        align="center"
-                       style="padding-top: 28px;">
+                       style="padding-top: 15px;">
                     <!--                    <el-button type="danger"><a :href="urls[3]">{{btns[3]}}</a></el-button>-->
                     <!--                    点击获取完整大纲-->
                     <button class="btn"><a :href="urls[3]">{{btns[3]}}</a></button>
@@ -342,7 +348,7 @@ export default {
   data() {
     return {
       texts: [
-        "课程名称：Oracle-" + np + "认证培训",
+        "课程名称：" + np + "-DBA认证培训",
         "开班类型：线上开班",
         "认证等级：OCA/OCP",
         "授课方式：线上直播+录播、班级群在线答疑",
@@ -462,11 +468,11 @@ export default {
             "区分引用的类型和对象的类型，确定何时需要铸造;<br>" +
             "使用super和this来访问对象和构造函数;使用抽象类和接口。<br>",
         },
-        {
-          hcircle: require("@/assets/img/public/hcircle_05.png"),
-          name: "使用Oracle API中的选定类",
-          text: "",
-        },
+        // {
+        //   hcircle: require("@/assets/img/public/hcircle_05.png"),
+        //   name: "使用Oracle API中的选定类",
+        //   text: "",
+        // },
       ],
 
       main: "主页>" + np,
@@ -474,7 +480,7 @@ export default {
       t1: "课程大纲",
       t2: "为什么要选择学习" + np,
 
-      back01: require("@/assets/img/Oracle/Oracle.png"),
+      back01: require("@/assets/img/Oracle/bgc02.png"),
       kcgs: require("@/assets/img/public/kcgs.png"),
       circle: require("@/assets/img/public/circle.png"),
     };
@@ -496,14 +502,13 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/css/hry.css";
 .oracle {
-  
   .b-item {
     background-color: #fff;
   }
   .b-item:hover {
     background-color: red;
     box-shadow: 1px 1px 15px -1px #000000;
-    .item-img{
+    .item-img {
       border-radius: 50%;
       width: 50px;
       height: 50px;
@@ -512,12 +517,17 @@ export default {
       justify-content: center;
       align-items: center;
     }
-    .color-fff{
+    .color-fff {
       color: #fff;
     }
   }
-  .mb-20{
+  .mb-20 {
     margin-bottom: 20px;
+  }
+  .bgc01 {
+    background-image: url("../assets/img/Oracle/bgc02.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
   }
 }
 </style>

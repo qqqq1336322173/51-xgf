@@ -24,7 +24,7 @@
             </li>
           </ul>
 
-        </div> 
+        </div>
       </el-col>-->
       <el-col :offset="8"
               :span="3">
@@ -33,9 +33,9 @@
                :src="qq"
                alt="qq联系方式" />
         </div>
-        <!-- <div class="gz-content">
-          扫码咨询官方QQ
-        </div> -->
+        <div class="gz-content">
+          添加QQ
+        </div>
       </el-col>
       <el-col :span="3">
         <div>
@@ -43,9 +43,9 @@
                :src="wx"
                alt="微信公众号二维码" />
         </div>
-        <!-- <div class="gz-content">
-          关注官方微信
-        </div> -->
+        <div class="gz-content">
+          关注公众号
+        </div>
       </el-col>
       <el-col :span="9">
         <div class="friend-link">
@@ -60,7 +60,7 @@
           <!-- <a href="web/gywm.jsp">关于我们</a> &nbsp; <span>合作伙伴</span>-->
           <p><span>24小时在线热线 :</span> <span>18805000100</span></p>
           <!--    <p><span>更多信息关注： </span> <img  src="web/images/change/index_ft_wb.png"> &nbsp; <img  src="web/images/change/index_ft_wx.png"></p> -->
-          <p>Copyright © 51学工坊 版权所有 闽ICP备17001998号</p>
+          <p><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">Copyright © 51学工坊 版权所有 闽ICP备2020021050号</a></p>
         </div>
       </el-col>
     </el-row>
@@ -118,5 +118,9 @@ export default {
 }
 .el-col-3 {
   width: auto;
+}
+.gz-content {
+  font-weight: 700;
+  text-align: center;
 }
 </style>

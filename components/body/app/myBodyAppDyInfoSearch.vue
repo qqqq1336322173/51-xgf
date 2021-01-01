@@ -19,7 +19,8 @@
           </el-col>
           <el-col :span="8">
             <div class="">
-              <img src="~assets/img/app/dyInfo/detail_info.png"
+              <!-- :src="item.newsImg ? require(item.newsImg) : ~assets/img/app/dyInfo/detail_info.png" -->
+              <img :src="item.newsImg || require('@/assets/img/app/dyInfo/detail_info.png')"
                    alt="详情图" />
             </div>
           </el-col>
@@ -101,7 +102,7 @@ export default {
       // console.log(this.page);
       let keyword = this.$route.query.keyword || '';
       // console.log(ky)
-      // http://120.78.61.58:81/eduonline/news/newsByKeyWordForPage.action?keyword=Oracle&page=1&rows=2
+      // http://81.69.237.90:81/eduonline/news/newsByKeyWordForPage.action?keyword=Oracle&page=1&rows=2
       let url = this.url + "/news/newsByKeyWordForPage.action";
       // console.log(url)
       httpServer(
